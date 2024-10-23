@@ -1,0 +1,302 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Dec  1 16:29:17 2022
+# Process ID: 6628
+# Current directory: Z:/Desktop/ee354/snake_game/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log snake_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source snake_top.tcl
+# Log file: Z:/Desktop/ee354/snake_game/project_1/project_1.runs/synth_1/snake_top.vds
+# Journal file: Z:/Desktop/ee354/snake_game/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source snake_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:20 . Memory (MB): peak = 1089.016 ; gain = 0.000
+Command: synth_design -top snake_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 8996
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1115.504 ; gain = 26.488
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'snake_top' [Z:/Desktop/ee354/snake_game/snake_top.v:2]
+INFO: [Synth 8-6157] synthesizing module 'BUFGP' [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1239]
+INFO: [Synth 8-6155] done synthesizing module 'BUFGP' (1#1) [C:/Xilinx/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1239]
+INFO: [Synth 8-6157] synthesizing module 'snake_core' [Z:/Desktop/ee354/snake_game/snake_core.v:9]
+	Parameter INIT bound to: 8'b00000001 
+	Parameter MOVE bound to: 8'b00000010 
+	Parameter CHECK bound to: 8'b00000100 
+	Parameter HOLD bound to: 8'b00001000 
+	Parameter EAT bound to: 8'b00010000 
+	Parameter WIN bound to: 8'b00100000 
+	Parameter LOSE bound to: 8'b01000000 
+	Parameter UNKN bound to: 8'b10000000 
+	Parameter LEFT bound to: 2'b00 
+	Parameter RIGHT bound to: 2'b01 
+	Parameter UP bound to: 2'b10 
+	Parameter DOWN bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'snake_core' (2#1) [Z:/Desktop/ee354/snake_game/snake_core.v:9]
+INFO: [Synth 8-6157] synthesizing module 'display_controller' [Z:/Desktop/ee354/snake_game/display_controller.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'display_controller' (3#1) [Z:/Desktop/ee354/snake_game/display_controller.v:5]
+INFO: [Synth 8-6157] synthesizing module 'snake_controller' [Z:/Desktop/ee354/snake_game/snake_controller.v:5]
+	Parameter RED bound to: 12'b111100000000 
+	Parameter YELLOW bound to: 12'b111111110000 
+	Parameter WHITE bound to: 12'b111111111111 
+	Parameter BLACK bound to: 12'b000000000000 
+	Parameter GREEN bound to: 12'b000011110000 
+INFO: [Synth 8-6155] done synthesizing module 'snake_controller' (4#1) [Z:/Desktop/ee354/snake_game/snake_controller.v:5]
+WARNING: [Synth 8-151] case item 3'b100 is unreachable [Z:/Desktop/ee354/snake_game/snake_top.v:120]
+WARNING: [Synth 8-151] case item 3'b101 is unreachable [Z:/Desktop/ee354/snake_game/snake_top.v:121]
+WARNING: [Synth 8-151] case item 3'b110 is unreachable [Z:/Desktop/ee354/snake_game/snake_top.v:122]
+WARNING: [Synth 8-151] case item 3'b111 is unreachable [Z:/Desktop/ee354/snake_game/snake_top.v:123]
+INFO: [Synth 8-155] case statement is not full and has no default [Z:/Desktop/ee354/snake_game/snake_top.v:119]
+INFO: [Synth 8-155] case statement is not full and has no default [Z:/Desktop/ee354/snake_game/snake_top.v:131]
+INFO: [Synth 8-6155] done synthesizing module 'snake_top' (5#1) [Z:/Desktop/ee354/snake_game/snake_top.v:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:34 . Memory (MB): peak = 1194.336 ; gain = 105.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:54 . Memory (MB): peak = 1194.336 ; gain = 105.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:54 . Memory (MB): peak = 1194.336 ; gain = 105.320
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1194.336 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [Z:/Desktop/ee354/snake_game/nexys4.xdc]
+Finished Parsing XDC File [Z:/Desktop/ee354/snake_game/nexys4.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [Z:/Desktop/ee354/snake_game/nexys4.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/snake_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/snake_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1310.094 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGP => BUFGP (BUFG, IBUF): 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.815 . Memory (MB): peak = 1310.094 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:01:39 . Memory (MB): peak = 1310.094 ; gain = 221.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:01:39 . Memory (MB): peak = 1310.094 ; gain = 221.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:01:41 . Memory (MB): peak = 1310.094 ; gain = 221.078
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'SSD_CATHODES_reg' [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:01:56 . Memory (MB): peak = 1310.094 ; gain = 221.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 32    
+	   2 Input   11 Bit       Adders := 32    
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
++---Registers : 
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 34    
+	                8 Bit    Registers := 19    
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input   12 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 3     
+	   8 Input    8 Bit        Muxes := 17    
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 206   
+	   5 Input    7 Bit        Muxes := 1     
+	   4 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 1     
+	   5 Input    2 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 19    
+	   2 Input    1 Bit        Muxes := 24    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'SSD_CATHODES_reg[7]/Q' [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'SSD_CATHODES_reg[6]/Q' [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'SSD_CATHODES_reg[5]/Q' [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'SSD_CATHODES_reg[4]/Q' [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'SSD_CATHODES_reg[3]/Q' [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'SSD_CATHODES_reg[2]/Q' [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'SSD_CATHODES_reg[1]/Q' [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'SSD_CATHODES_reg[0]/Q' [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [Z:/Desktop/ee354/snake_game/snake_top.v:127]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:02:42 . Memory (MB): peak = 1310.094 ; gain = 221.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:02:53 . Memory (MB): peak = 1310.094 ; gain = 221.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:02:54 . Memory (MB): peak = 1310.094 ; gain = 221.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:58 ; elapsed = 00:02:56 . Memory (MB): peak = 1330.750 ; gain = 241.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:03:02 . Memory (MB): peak = 1345.211 ; gain = 256.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:03:02 . Memory (MB): peak = 1345.211 ; gain = 256.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:03:03 . Memory (MB): peak = 1345.211 ; gain = 256.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:03:03 . Memory (MB): peak = 1345.211 ; gain = 256.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:03:03 . Memory (MB): peak = 1345.211 ; gain = 256.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:03:03 . Memory (MB): peak = 1345.211 ; gain = 256.195
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |   264|
+|3     |LUT1   |    55|
+|4     |LUT2   |   266|
+|5     |LUT3   |   284|
+|6     |LUT4   |   667|
+|7     |LUT5   |   349|
+|8     |LUT6   |   877|
+|9     |FDCE   |   162|
+|10    |FDPE   |     4|
+|11    |FDRE   |   321|
+|12    |BUFGP  |     1|
+|13    |IBUF   |     7|
+|14    |OBUF   |    42|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:03:04 . Memory (MB): peak = 1345.211 ; gain = 256.195
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 24 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:50 ; elapsed = 00:02:47 . Memory (MB): peak = 1345.211 ; gain = 140.438
+Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:03:04 . Memory (MB): peak = 1345.211 ; gain = 256.195
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 1345.211 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 265 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1355.273 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGP => BUFGP (BUFG, IBUF): 1 instance 
+
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 5 Warnings, 24 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:13 ; elapsed = 00:03:48 . Memory (MB): peak = 1355.273 ; gain = 266.258
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'Z:/Desktop/ee354/snake_game/project_1/project_1.runs/synth_1/snake_top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:01 ; elapsed = 00:00:43 . Memory (MB): peak = 1355.273 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file snake_top_utilization_synth.rpt -pb snake_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  1 16:34:43 2022...

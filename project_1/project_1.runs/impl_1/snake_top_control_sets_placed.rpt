@@ -1,0 +1,119 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Thu Dec  1 17:15:47 2022
+| Host         : GDESK-95 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file snake_top_control_sets_placed.rpt
+| Design       : snake_top
+| Device       : xc7a100t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    41 |
+|    Minimum number of control sets                        |    41 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   145 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    41 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |    15 |
+| >= 10 to < 12      |     3 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    18 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              13 |            6 |
+| No           | No                    | Yes                    |              26 |            7 |
+| No           | Yes                   | No                     |              10 |            4 |
+| Yes          | No                    | No                     |             288 |          134 |
+| Yes          | No                    | Yes                    |             140 |           49 |
+| Yes          | Yes                   | No                     |              10 |            3 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+--------------------------------------+----------------------+------------------+----------------+--------------+
+|  Clock Signal  |             Enable Signal            |   Set/Reset Signal   | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+--------------------------------------+----------------------+------------------+----------------+--------------+
+|  BUFGP1/O      |                                      |                      |                1 |              1 |         1.00 |
+|  dc/clk        |                                      |                      |                1 |              1 |         1.00 |
+|  dc/pulse      |                                      |                      |                1 |              1 |         1.00 |
+|  vga_clk_BUFG  |                                      | BtnC_IBUF            |                1 |              3 |         3.00 |
+|  game_clk_BUFG | snake_core1/Length[3]_i_1_n_0        | Sw0_IBUF             |                2 |              4 |         2.00 |
+|  game_clk_BUFG | snake_core1/state[7]_i_1_n_0         | Sw0_IBUF             |                4 |              8 |         2.00 |
+|  game_clk_BUFG | snake_core1/Food[7]_i_1_n_0          | Sw0_IBUF             |                3 |              8 |         2.67 |
+|  game_clk_BUFG | snake_core1/locations[10][7]_i_1_n_0 | Sw0_IBUF             |                2 |              8 |         4.00 |
+|  game_clk_BUFG | snake_core1/locations[11][7]_i_1_n_0 | Sw0_IBUF             |                3 |              8 |         2.67 |
+|  game_clk_BUFG | snake_core1/locations[13][7]_i_1_n_0 | Sw0_IBUF             |                3 |              8 |         2.67 |
+|  game_clk_BUFG | snake_core1/locations[2][7]_i_1_n_0  | Sw0_IBUF             |                4 |              8 |         2.00 |
+|  game_clk_BUFG | snake_core1/locations[3][7]_i_1_n_0  | Sw0_IBUF             |                3 |              8 |         2.67 |
+|  game_clk_BUFG | snake_core1/locations[14][7]_i_1_n_0 | Sw0_IBUF             |                2 |              8 |         4.00 |
+|  game_clk_BUFG | snake_core1/locations[12][7]_i_1_n_0 | Sw0_IBUF             |                3 |              8 |         2.67 |
+|  game_clk_BUFG | snake_core1/locations[4][7]_i_1_n_0  | Sw0_IBUF             |                3 |              8 |         2.67 |
+|  game_clk_BUFG | snake_core1/locations[7][7]_i_1_n_0  | Sw0_IBUF             |                2 |              8 |         4.00 |
+|  game_clk_BUFG | snake_core1/locations[9][7]_i_1_n_0  | Sw0_IBUF             |                3 |              8 |         2.67 |
+|  game_clk_BUFG | snake_core1/locations[8][7]_i_1_n_0  | Sw0_IBUF             |                2 |              8 |         4.00 |
+|  game_clk_BUFG | snake_core1/locations[5][7]_i_1_n_0  | Sw0_IBUF             |                3 |              8 |         2.67 |
+|  game_clk_BUFG | snake_core1/locations[6][7]_i_1_n_0  | Sw0_IBUF             |                1 |              8 |         8.00 |
+|  game_clk_BUFG |                                      |                      |                3 |             10 |         3.33 |
+|  dc/clk        |                                      | dc/hCount[9]_i_1_n_0 |                4 |             10 |         2.50 |
+|  dc/clk        | dc/hCount[9]_i_1_n_0                 | dc/vCount[9]_i_1_n_0 |                3 |             10 |         3.33 |
+|  game_clk_BUFG | snake_core1/locations[0][7]_i_1_n_0  | Sw0_IBUF             |                6 |             16 |         2.67 |
+|  vga_clk_BUFG  | snake_core1/Length_reg[2]_2[0]       |                      |               11 |             18 |         1.64 |
+|  vga_clk_BUFG  | snake_core1/Length_reg[2]_3[0]       |                      |                7 |             18 |         2.57 |
+|  vga_clk_BUFG  | snake_core1/Length_reg[3]_1[0]       |                      |                9 |             18 |         2.00 |
+|  vga_clk_BUFG  | snake_core1/Length_reg[3]_4[0]       |                      |                8 |             18 |         2.25 |
+|  vga_clk_BUFG  | snake_core1/Length_reg[3]_2[0]       |                      |                9 |             18 |         2.00 |
+|  vga_clk_BUFG  | snake_core1/Length_reg[1]_1[0]       |                      |                8 |             18 |         2.25 |
+|  vga_clk_BUFG  | snake_core1/Length_reg[3]_3[0]       |                      |                9 |             18 |         2.00 |
+|  vga_clk_BUFG  | snake_core1/Length_reg[2]_1[0]       |                      |                7 |             18 |         2.57 |
+|  vga_clk_BUFG  | snake_core1/Q[1]                     |                      |               10 |             18 |         1.80 |
+|  vga_clk_BUFG  | snake_core1/Length_reg[0]_1[0]       |                      |                7 |             18 |         2.57 |
+|  vga_clk_BUFG  | snake_core1/state_reg[7]_0[2]        |                      |                8 |             18 |         2.25 |
+|  vga_clk_BUFG  | snake_core1/Length_reg[2]_0          |                      |                9 |             18 |         2.00 |
+|  vga_clk_BUFG  | snake_core1/Length_reg[3]_5          |                      |                9 |             18 |         2.00 |
+|  vga_clk_BUFG  | snake_core1/E[0]                     |                      |                6 |             18 |         3.00 |
+|  vga_clk_BUFG  | snake_core1/Length_reg[1]_0[0]       |                      |                7 |             18 |         2.57 |
+|  vga_clk_BUFG  | snake_core1/Length_reg[3]_0[0]       |                      |               10 |             18 |         1.80 |
+|  BUFGP1/O      |                                      | Sw0_IBUF             |                6 |             23 |         3.83 |
++----------------+--------------------------------------+----------------------+------------------+----------------+--------------+
+
+
